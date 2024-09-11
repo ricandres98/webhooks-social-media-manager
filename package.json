@@ -1,0 +1,30 @@
+{
+  "name": "webhooks-social-media-manager",
+  "version": "1.0.0",
+  "description": "webhooks server for social media manager",
+  "main": "index.ts",
+  "scripts": {
+    "build": "npx tsc",
+    "start": "node dist/index.js",
+    "dev": "nodemon src/index.ts"
+  },
+  "keywords": [
+    "webhooks",
+    "typescript",
+    "express",
+    "node"
+  ],
+  "author": "Ricardo Ojeda",
+  "license": "MIT",
+  "dependencies": {
+    "dotenv": "^16.4.5",
+    "express": "^4.20.0",
+    "nodemon": "^3.1.4",
+    "ts-node": "^10.9.2"
+  },
+  "devDependencies": {
+    "@types/express": "^4.17.21",
+    "@types/node": "^22.5.4",
+    "typescript": "^5.6.2"
+  }
+}
