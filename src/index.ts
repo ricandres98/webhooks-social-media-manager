@@ -26,9 +26,7 @@ app.get("/webhooks", (req, res) => {
     const verifyToken = process.env.VERIFY_TOKEN;
 
     if(hubVerifyToken === verifyToken) {
-        res.status(200).json({
-            "hub.challenge": hubChallenge,
-        });
+        res.status(200).send(hubChallenge);
     } else {
         res.status(400).send({
             error: "Invalid token"
