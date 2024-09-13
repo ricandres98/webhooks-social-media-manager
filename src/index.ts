@@ -6,6 +6,8 @@ dotenv.config();
 const app = express();
 const port = process.env.PORT;
 
+app.use(express.json());
+
 app.get("/", (request, response) => {
     response.send("Hola mundo");
 });
@@ -32,4 +34,10 @@ app.get("/webhooks", (req, res) => {
             error: "Invalid token"
         });
     }
+});
+
+app.post("/", (req, res) => {
+    const { body } = req;
+
+    res.status(200).json(body);
 })
